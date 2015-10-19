@@ -340,6 +340,10 @@
           this.isLoading = true;
         } else {
           this.isLoading = false;
+          // On scroll end
+          if ((from + size - 1) === maxFrom && this.props.scrollEndHandler) {
+            this.props.scrollEndHandler();
+          }
         }
       }
     }, {
