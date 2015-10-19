@@ -334,7 +334,7 @@
           this.setState({ from: from, size: size });
         }
         /* Load history list when scroll to the top */
-        if (from === 0 && this.props.loadHistory) {
+        if (from === 0 && this.props.loadHistory && !this.isLoading) {
           console.log('loadHistory');
           this.props.loadHistory();
           this.isLoading = true;
