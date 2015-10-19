@@ -113,6 +113,7 @@
       var size = this.constrainSize(pageSize, length, pageSize, from);
       this.state = { from: from, size: size, itemsPerRow: itemsPerRow };
       this.cache = {};
+      this.isLoading = false;
     }
 
     _createClass(_default, [{
@@ -331,11 +332,14 @@
         /* To avoid the infinite loop when quickly slide forward and backward. */
         if (Math.abs(from - this.state.from) > 1) {
           this.setState({ from: from, size: size });
-          /* Load history list when scroll to the top */
-          if (from === 0 && this.props.loadHistory) {
-            console.log('loadHistory');
-            this.props.loadHistory();
-          }
+        }
+        /* Load history list when scroll to the top */
+        if (from === 0 && this.props.loadHistory) {
+          console.log('loadHistory');
+          this.props.loadHistory();
+          this.isLoading = true;
+        } else {
+          this.isLoading = false;
         }
       }
     }, {
