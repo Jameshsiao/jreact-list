@@ -1,0 +1,20 @@
+{
+  "name": "jreact-list",
+  "version": "0.7.4",
+  "author": "Casey Foster <c@sey.me>",
+  "license": "MIT",
+  "main": "react-list.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jameshsiao/jreact-list"
+  },
+  "peerDependencies": {
+    "react": ">= 0.14.0 < 0.15.0",
+    "react-dom": ">= 0.14.0 < 0.15.0"
+  },
+  "devDependencies": {
+    "cogs": "1.0.7",
+    "cogs-transformer-babel": "1.0.12",
+    "cogs-transformer-replace": "1.0.1"
+  }
+}

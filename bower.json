@@ -1,0 +1,21 @@
+{
+  "name": "jreact-list",
+  "main": "react-list.js",
+  "version": "0.7.4",
+  "homepage": "https://github.com/Jameshsiao/jreact-list",
+  "authors": [
+    "James <heroms90@gmail.com>"
+  ],
+  "description": "Forked from orgsync/react-list",
+  "keywords": [
+    "react-list"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
